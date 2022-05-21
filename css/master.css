@@ -1,0 +1,263 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("/font/Roboto-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,
+body,
+main {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+html,
+body,
+main {
+    margin: auto;
+    overflow: auto;
+    font-size: 12px;
+    letter-spacing: .7px;
+}
+
+main {
+    max-width: 900px;
+    padding: 0 1.5rem;
+}
+
+main>div {
+    margin: 3rem 0;
+}
+
+.btn {
+    font-size: 1rem;
+    color: #7D7D7D;
+    text-decoration: none;
+}
+
+a {
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: normal;
+    -o-text-overflow: ellipsis;
+}
+
+.goto {
+    cursor: pointer;
+}
+
+.md {
+    display: grid;
+    grid-template-columns: auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.md-folder {
+    cursor: pointer;
+}
+
+.md-folder-exploded {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.md-table {
+    transition: all .2s ease-in-out;
+}
+
+.md-table:focus {
+    background: rgba(255, 255, 255, .08);
+}
+
+.md-table .md-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    min-height: 40px;
+}
+
+.md-table .mdi {
+    line-height: 16px;
+}
+
+.md-table .md-item-icon,
+.md-table .md-item-expand {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 16px;
+    height: 16px;
+    margin: 16px 0 16px 16px;
+    white-space: nowrap;
+    line-height: 0;
+}
+
+.md-table .md-item-icon>img {
+    width: 16px;
+    height: 16px;
+}
+
+.md-table .md-item-icon .mdi {
+    font-size: 16px;
+}
+
+.md-table .md-item-title {
+    margin: 0 18px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.md-table .md-item-title,
+.md-table .md-item-title a {}
+
+.md-table .md-item-title .small {
+    font-size: .8em;
+    margin-top: 2px;
+    color: #a2a2a2;
+}
+
+.md.md-panel {
+    margin: 10px;
+    max-width: 500px;
+}
+
+.md-item-folder {}
+
+.md-item-folder .md-item-title {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/* TEMA CHIARO */
+
+body {
+    background-color: #F1F3F4;
+}
+
+main {
+    color: #737373;
+}
+
+.md {
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 10px -2px #0000002E;
+}
+
+.md .md-row {
+    color: #484848;
+}
+
+.md .md-folder-exploded {
+    background-color: rgba(0, 0, 0, .02);
+    box-shadow: inset 0 8px 8px -12px black;
+}
+
+
+/* TEMA SCURO */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #323232;
+    }
+    main {
+        color: #929292;
+    }
+    .md {
+        background-color: #292A2D;
+    }
+    .md .md-row {
+        color: #D2D2D2;
+    }
+    .md .md-folder-exploded {
+        background-color: rgba(0, 0, 0, .20);
+        box-shadow: 0 4px 10px -2px #0000002E;
+    }
+}
+
+
+/* CUSTOM CSS */
+
+p {
+    margin: 0;
+}
+
+main {
+    min-height: auto;
+}
+
+.header {
+    text-align: center;
+    font-size: 80px;
+    color: #D2D2D2;
+    margin-top: 3rem;
+}
+
+.header__date {
+    font-size: 20px;
+}
+
+.nth {
+    vertical-align: top;
+    font-size: 10px;
+}
+
+.bookmark-icon-bar {
+    max-width: 900px;
+    border-radius: 8px;
+    padding: 0 1.5rem;
+    margin: auto;
+    min-height: 40px;
+}
+
+.bookmark-icon-bar__internal {
+    width: 100%;
+    color: #D2D2D2;
+    border-radius: 8px;
+    background-color: #292A2D;
+    min-height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bookmark-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 60px;
+    width: 60px;
+    content: '';
+}
+
+.icon--netflix {
+    background-image: url(../images/icons/netflix.svg);
+    background-size: 20px;
+}
+
+.icon--reddit {
+    background-image: url(../images/icons/reddit.svg);
+    background-size: 36px;
+}
+
+.icon--amazon {
+    background-image: url(../images/icons/amazon.svg);
+    background-size: 36px;
+}
+
+.icon--youtube {
+    background-image: url(../images/icons/youtube.svg);
+    background-size: 45px;
+}
